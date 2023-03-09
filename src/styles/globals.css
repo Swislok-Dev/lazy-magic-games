@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Abula';
+  src: url('/fonts/Abula-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/FiraCode-VariableFont_wght.ttf');
+}
+
 :root {
   --black: rgb(50 50 50);
   --white: rgb(240 240 240);
@@ -13,11 +28,10 @@
 }
 
 html {
-  font-family: 'Abula', 'Ubuntu', 'Fira Code';
+  font-family: 'Ubuntu', 'Fira Code', serif;
   background-color: var(--black);
   color: var(--white);
 }
-
 
 h1 {
   font-size: 2rem;
