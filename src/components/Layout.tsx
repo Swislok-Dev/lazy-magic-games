@@ -34,7 +34,9 @@ const Layout: React.FC<Props> = ({ children }) => {
           <Link href="/">Contact Us</Link>
         </nav>
         <main>{children}</main>
-        <footer>Copyright &copy; 2023 by Lazy Magic Games</footer>
+        <footer>
+          <p>Copyright &copy; 2023 by Lazy Magic Games</p>
+        </footer>
       </div>
     </>
   );
