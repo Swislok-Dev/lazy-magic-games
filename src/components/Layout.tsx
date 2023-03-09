@@ -23,7 +23,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <nav id="main-navigation">
           <div className="sidebar">
             <MyImage
-              src="/favicon.png"
+              src="/LazyMagicLogocropped.png"
               width={100}
               height={100}
               alt="Magic Hat"
