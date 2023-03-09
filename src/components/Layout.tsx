@@ -21,17 +21,20 @@ const Layout: React.FC<Props> = ({ children }) => {
           <h1 id="main-heading">Experience Lazy Magic Games!</h1>
         </header>
         <nav id="main-navigation">
-          <MyImage
-            src="/favicon.png"
-            width={100}
-            height={100}
-            alt="Magic Hat"
-          />
-
-          <Link href="/">Home</Link>
-          <Link href="/">Where To Buy</Link>
-          <Link href="/">Events</Link>
-          <Link href="/">Contact Us</Link>
+          <div className="sidebar">
+            <MyImage
+              src="/favicon.png"
+              width={100}
+              height={100}
+              alt="Magic Hat"
+            />
+            <ul>
+              <Link href="/">Home</Link>
+              <Link href="/">Where To Buy</Link>
+              <Link href="/">Events</Link>
+              <Link href="/">Contact Us</Link>
+            </ul>
+          </div>
         </nav>
         <main>{children}</main>
         <footer>
