@@ -15,10 +15,8 @@ function EventsPage() {
           object-fit="contain"
         />
       </section>
-      <section>
+      <section className="video-embed">
         <iframe
-          width="560"
-          height="615"
           src="https://www.youtube.com/embed/ZCthl8BGZ9k"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

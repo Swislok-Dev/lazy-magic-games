@@ -8,6 +8,13 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children }) => {
+  const [isShown, setIsShown] = React.useState(false);
+
+  const closeNav = () => {
+    if (isShown) {
+      setIsShown(false);
+    }
+  };
   return (
     <>
       <Head>
@@ -16,27 +23,44 @@ const Layout: React.FC<Props> = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
-      <div className="main">
+      <div id="container">
         <header>
-          <h1 id="main-heading">Experience Lazy Magic Games!</h1>
-        </header>
-        <nav id="main-navigation">
-          <div className="sidebar">
+          <div onClick={() => setIsShown(!isShown)} id="hamburger">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+          <picture id="header-logo">
             <MyImage
               src="/LazyMagicLogocropped.png"
-              width={100}
+              width={170}
               height={100}
               alt="Magic Hat"
             />
-            <ul>
-              <Link href="/">Home</Link>
-              <Link href="/">Where To Buy</Link>
-              <Link href="/events">Events</Link>
-              <Link href="/">Contact Us</Link>
-            </ul>
+          </picture>
+          <span></span>
+          <div className={isShown ? 'active' : undefined} id="main-navigation">
+            <nav className={isShown ? 'active' : undefined} id="navigation">
+              <ul className="nav-links">
+                <Link onClick={closeNav} className="nav-link" href="/">
+                  Home
+                </Link>
+                <Link onClick={closeNav} className="nav-link" href="/">
+                  Where To Buy
+                </Link>
+                <Link onClick={closeNav} className="nav-link" href="/events">
+                  Events
+                </Link>
+                <Link onClick={closeNav} className="nav-link" href="/">
+                  Contact Us
+                </Link>
+              </ul>
+            </nav>
           </div>
-        </nav>
-        <main>{children}</main>
+        </header>
+
+        <main onClick={closeNav}>{children}</main>
+
         <footer>
           <p>Copyright &copy; 2023 by Lazy Magic Games</p>
         </footer>
