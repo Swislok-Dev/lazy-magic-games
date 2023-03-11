@@ -41,6 +41,10 @@ h2 {
   font-size: 2rem;
 }
 
+a {
+  width: fit-content;
+}
+
 button {
   background-color: var(--orange);
   width: fit-content;
@@ -154,6 +158,10 @@ section#home-page > * {
   align-items: center;
 }
 
+#page-hero {
+  filter: blur(1.5px) grayscale(100%) brightness(60%);
+}
+
 #page-hero-text {
   display: flex;
   flex-direction: column;
@@ -193,9 +201,7 @@ section#home-page > * {
   width: 100%;
 }
 
-#page-hero {
-  filter: blur(1.5px) grayscale(100%) brightness(60%);
-}
+
 
 section > * {
   padding: 1rem 0 1rem;
