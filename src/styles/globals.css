@@ -22,6 +22,8 @@
   --black-dark: rgb(30 30 30);
   --white: rgb(240 240 240);
   --orange: rgb(252 123 0);
+  --orange-dark: rgb(252 123 0 / 0.7);
+  --orange-light: rgb(255, 123, 0);
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -39,6 +41,15 @@ h2 {
   font-size: 2rem;
 }
 
+button {
+  background-color: var(--orange);
+  width: fit-content;
+  padding: 1rem 3rem;
+  color: black;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 #container {
   display: grid;
   grid-auto-rows: 1fr minmax(auto, 100%) 1fr;
@@ -47,7 +58,7 @@ h2 {
 header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,7 +100,6 @@ header span:not(.bar) {
   border-radius: 5px;
 }
 
-
 #main-navigation {
   background-color: black;
   position: absolute;
@@ -125,21 +135,66 @@ main {
   width: 100%;
 }
 
-footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  width: 100%;
-  background-color: var(--black-dark);
-  font-size: clamp(0.5rem, 4vw, 1rem);
-}
-
 section {
   display: flex;
   justify-content: center;
   object-fit: contain;
+}
+
+section#home-page > * {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#home-page article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  position: absolute;
+  width: fit-content;
+  max-width: 500px;
+  margin: 0 2rem;
+  gap: 2rem;
+  top: 30%;
+  z-index: 1;
+}
+
+#page-hero-text h2 {
+  text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  button:hover {
+    background-color: var(--orange-dark);
+  }
+
+  button:active {
+    background-color: var(--orange-light);
+  }
+}
+
+@media (hover: none) {
+  button:active {
+    background-color: var(--orange-dark);
+  }
+}
+
+.full-image {
+  height: 100%;
+  width: 100%;
+}
+
+#page-hero {
+  filter: blur(1.5px) grayscale(100%) brightness(60%);
 }
 
 section > * {
@@ -160,4 +215,15 @@ section:nth-child(odd) {
 
 .video-embed iframe {
   aspect-ratio: 4/3;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  background-color: var(--black-dark);
+  font-size: clamp(0.5rem, 4vw, 1rem);
 }
