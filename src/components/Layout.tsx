@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import MyImage from './MyImage';
+import Image from 'next/image';
 
 type Props = {
   children: any;
@@ -31,16 +31,17 @@ const Layout: React.FC<Props> = ({ children }) => {
             <span className="bar"></span>
           </div>
           <picture id="header-logo">
-            <MyImage
-              src="/LazyMagicLogocropped.png"
+            <Image
+              src="/images/LazyMagicLogo.png"
               width={170}
               height={100}
+              loading={'eager'}
               alt="Magic Hat"
             />
           </picture>
           <span></span>
           <div className={isShown ? 'active' : undefined} id="main-navigation">
-            <nav className={isShown ? 'active' : undefined} id="navigation">
+            <nav id="navigation">
               <ul className="nav-links">
                 <Link onClick={closeNav} className="nav-link" href="/">
                   Home
