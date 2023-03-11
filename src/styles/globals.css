@@ -39,6 +39,11 @@ h2 {
   font-size: 2rem;
 }
 
+#container {
+  display: grid;
+  grid-auto-rows: 1fr minmax(auto, 100%) 1fr;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -55,6 +60,11 @@ header {
 
 #header-logo {
   width: initial;
+}
+
+header span:not(.bar) {
+  height: 25px;
+  width: 25px;
 }
 
 @media screen and (max-width: 340px) {
@@ -79,9 +89,6 @@ header {
   border-radius: 5px;
 }
 
-header span {
-  width: 25px;
-}
 
 #main-navigation {
   background-color: black;
@@ -91,8 +98,8 @@ header span {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 100%;
   min-height: 100vh;
+  z-index: 1;
   padding: 0.5rem clamp(2rem, 4vw, 8rem) 1rem 0.5rem;
   transition: all 500ms ease;
 }
@@ -124,8 +131,6 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  position: relative;
-  bottom: 0;
   width: 100%;
   background-color: var(--black-dark);
   font-size: clamp(0.5rem, 4vw, 1rem);
