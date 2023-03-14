@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,16 +13,16 @@ export default function Home() {
               Live streams, discussions, co-operative, competitive board, and
               tabletop games. What are you waiting for?
             </p>
-            
-              <a href="https://discord.com/invite/6kaKFBYtBZ" target="_blank"><button>Discord Link</button></a>
-            
+            <Link href="https://discord.com/invite/6kaKFBYtBZ" target="_blank" className="btn">
+              Discord Link
+            </Link>
           </div>
           <Image
             src="/images/card_decks_01.png"
-            height={300}
-            width={300}
+            height={250}
+            width={250}
             alt="Card Decks"
-            id="page-hero"
+            id="page-hero-image"
             className="full-image"
           />
         </article>
