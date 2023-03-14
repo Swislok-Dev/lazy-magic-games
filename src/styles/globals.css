@@ -1,3 +1,17 @@
+:root {
+  --black: rgb(50 50 50);
+  --black-dark: rgb(30 30 30);
+  --white: rgb(240 240 240);
+  --orange: rgb(252 123 0);
+  --orange-dark: rgb(252 123 0 / 0.7);
+  --orange-light: rgb(255, 123, 0);
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
 @font-face {
   font-family: 'Ubuntu';
   src: url('/fonts/Ubuntu-Regular.ttf');
@@ -13,18 +27,13 @@
   src: url('/fonts/FiraCode-VariableFont_wght.ttf');
 }
 
-:root {
-  --black: rgb(50 50 50);
-  --black-dark: rgb(30 30 30);
-  --white: rgb(240 240 240);
-  --orange: rgb(252 123 0);
-  --orange-dark: rgb(252 123 0 / 0.7);
-  --orange-light: rgb(255, 123, 0);
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+.border {
+  border: 2px solid white;
+}
+
+html,
+body {
+  box-sizing: content-box;
 }
 
 html {
@@ -33,57 +42,86 @@ html {
   color: var(--white);
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  /* min-height: 100vh; */
+}
+
 h2 {
   font-size: 2rem;
 }
 
 a {
   width: fit-content;
+  text-decoration: none;
 }
 
-button {
+.btn {
+  cursor: pointer;
   background-color: var(--orange);
   width: fit-content;
   padding: 1rem 3rem;
   color: black;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 
-#container {
-  display: grid;
-  grid-auto-rows: 1fr minmax(auto, 100%) 1fr;
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+}
+
+section > * {
+  width: 100%;
+}
+
+section:nth-child(odd) {
+  background-color: black;
+}
+
+section#home-page > * {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 header {
   position: sticky;
   top: 0;
-  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
+  height: 4rem;
   padding: 2rem;
-  height: 8rem;
   gap: 16px;
   background-color: var(--black-dark);
   color: var(--white);
-}
-
-#header-logo {
-  width: initial;
-}
-
-header span:not(.bar) {
-  height: 25px;
-  width: 25px;
-}
-
-@media screen and (max-width: 340px) {
-  #header-logo {
-    content: url('/images/favicon.png');
-    width: 4.5rem;
-    margin: 0;
-  }
 }
 
 #hamburger {
@@ -100,18 +138,30 @@ header span:not(.bar) {
   border-radius: 5px;
 }
 
+header span:not(.bar) {
+  height: 25px;
+  width: 25px;
+}
+
+main {
+  display: grid;
+  position: relative;
+  grid-auto-flow: column;
+}
+
 #main-navigation {
-  background-color: black;
-  position: absolute;
-  top: 8rem;
-  left: -100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  min-height: 100vh;
-  z-index: 1;
-  padding: 0.5rem clamp(2rem, 4vw, 8rem) 1rem 0.5rem;
-  transition: all 500ms ease;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  max-width: fit-content;
+  overflow: scroll;
+  padding-right: 2rem;
+  transition: left 500ms ease;
+  background-color: var(--black);
+  z-index: 9;
 }
 
 #main-navigation.active {
@@ -119,9 +169,7 @@ header span:not(.bar) {
 }
 
 #navigation {
-  display: flex;
-  padding: 2rem 1.5rem;
-  overflow: scroll;
+  position: sticky;
 }
 
 .nav-links {
@@ -130,32 +178,41 @@ header span:not(.bar) {
   gap: 2rem;
 }
 
-main {
-  flex-direction: column;
-  width: 100%;
+.nav-link {
+  color: white;
 }
 
-section {
+footer {
+  margin-top: 0;
   display: flex;
   justify-content: center;
-  object-fit: contain;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--black-dark);
+  font-size: 1rem;
 }
 
-section#home-page > * {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
+@media screen and (max-width: 340px) {
+  #header-logo {
+    content: url('/images/favicon.png');
+    width: 4.5rem;
+    margin: 0;
+  }
 }
 
 #home-page article {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-#page-hero {
+#page-hero-image {
+  position: relative;
   filter: blur(1.5px) grayscale(100%) brightness(60%);
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 #page-hero-text {
@@ -168,64 +225,41 @@ section#home-page > * {
   max-width: 500px;
   margin: 0 2rem;
   gap: 2rem;
-  top: 30%;
+  top: 10%;
   z-index: 1;
 }
 
 #page-hero-text h2 {
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 @media (hover: hover) {
-  button:hover {
+  .btn:hover {
     background-color: var(--orange-dark);
   }
 
-  button:active {
+  .btn:focus {
+    border: 2px solid black;
+  }
+
+  .btn:active {
     background-color: var(--orange-light);
   }
 }
 
 @media (hover: none) {
-  button:active {
+  .btn:active {
     background-color: var(--orange-dark);
   }
 }
-
-.full-image {
-  height: 100%;
-  width: 100%;
-}
-
-
-
-section > * {
-  padding: 1rem 0 1rem;
-  width: 90%;
-  margin: 2rem 0 2rem;
-}
-
-section:nth-child(odd) {
-  background-color: black;
-}
-
-/* Events */
 
 .cheyanne {
   background-color: white;
 }
 
 .video-embed iframe {
+  outline: none;
+  border: none;
   aspect-ratio: 4/3;
-}
-
-footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  width: 100%;
-  background-color: var(--black-dark);
-  font-size: clamp(0.5rem, 4vw, 1rem);
 }
