@@ -5,14 +5,14 @@ import Image from 'next/image';
 function EventsPage() {
   return (
     <Layout>
-      <div className="main-content">
+
         <section>
           <Image
             src="https://bloximages.newyork1.vip.townnews.com/thecheyennepost.com/content/tncms/assets/v3/editorial/6/d5/6d5e2338-a62b-11ec-b13c-9bcc2763f01e/623390fd4c04c.image.png?resize=750%2C418"
             alt="Cheyanne Gaming Convention"
             width={560}
             height={315}
-            className="cheyanne"
+            className="cheyanne full-image"
             object-fit="contain"
           />
         </section>
@@ -24,7 +24,7 @@ function EventsPage() {
             allowFullScreen
           ></iframe>
         </section>
-      </div>
+
     </Layout>
   );
 }

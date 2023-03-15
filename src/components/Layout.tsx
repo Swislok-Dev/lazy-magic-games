@@ -14,6 +14,9 @@ const Layout: React.FC<Props> = ({ children }) => {
       setIsShown(false);
     }
   };
+
+  const isVisible = isShown ? 'active' : 'inactive';
+
   return (
     <>
       <Head>
@@ -39,11 +42,9 @@ const Layout: React.FC<Props> = ({ children }) => {
           <span></span>
         </header>
 
-        <main  onClick={closeNav}>
-          <nav
-            className={isShown ? 'active' : undefined}
-            id="main-navigation"
-          >
+        <main onClick={closeNav}>
+          <nav className={isVisible} id="main-navigation">
+            {/* <div id="navigation" className={isShown ? 'active' : undefined}> */}
             <ul className="nav-links">
               <Link onClick={closeNav} className="nav-link" href="/">
                 Home
@@ -57,9 +58,14 @@ const Layout: React.FC<Props> = ({ children }) => {
               <Link onClick={closeNav} className="nav-link" href="/">
                 Contact Us
               </Link>
+             
+              <Link onClick={closeNav} className="nav-link" href="/">
+                Last Item
+              </Link>
             </ul>
+            {/* </div> */}
           </nav>
-          {children}
+          <div className="main-content">{children}</div>
         </main>
 
         <footer>
