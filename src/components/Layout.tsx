@@ -23,6 +23,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <title>Lazy Magic Games</title>
         <meta name="description" content="Lazy Magic Games website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
       <div id="content">
@@ -58,7 +59,7 @@ const Layout: React.FC<Props> = ({ children }) => {
               <Link onClick={closeNav} className="nav-link" href="/">
                 Contact Us
               </Link>
-             
+
               <Link onClick={closeNav} className="nav-link" href="/">
                 Last Item
               </Link>

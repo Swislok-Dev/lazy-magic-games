@@ -1,0 +1,19 @@
+{
+  "name": "Lazy Magic Games",
+  "short_name": "Lazy Magic Games",
+  "description": "Website for Lazy Magic Games",
+  "start_url": "/",
+  "display": "browser",
+  "mode": "bookmark",
+  "theme_color": "white",
+  "background_color": "black",
+  "orientation": "portrait",
+  "id": "/?source=pwa",
+  "icons": [{
+    "src": "/images/favicon.png",
+    "density": 1,
+    "sizes": "any",
+    "type": "image/png",
+    "purpose": "any"
+  }]
+}
