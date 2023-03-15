@@ -22,8 +22,8 @@ export default function Home() {
         </div>
         <Image
           src="/images/card_decks_01.png"
-          height={250}
-          width={250}
+          height={500}
+          width={500}
           alt="Card Decks"
           id="page-hero-image"
           className="full-image"
