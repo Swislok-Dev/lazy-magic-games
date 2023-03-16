@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { TiSocialFacebook, TiSocialYoutube } from 'react-icons/Ti';
 
 type Props = {
   children: any;
@@ -66,7 +67,23 @@ const Layout: React.FC<Props> = ({ children }) => {
         </main>
 
         <footer>
-          <p>Copyright &copy; 2023 by Lazy Magic Games</p>
+          <div className="social-links">
+            <Link
+              href="https://www.facebook.com/lazymagicgames"
+              target="_blank"
+            >
+              <TiSocialFacebook />
+            </Link>
+            <Link
+              href="https://www.youtube.com/channel/UCSE-ffS3zxn1DvsLzfJvsqA"
+              target="_blank"
+            >
+              <TiSocialYoutube />
+            </Link>
+          </div>
+          <p className="uppercase">
+            Copyright &copy; 2023 by Lazy Magic Games - All rights reserved
+          </p>
         </footer>
       </div>
     </>
