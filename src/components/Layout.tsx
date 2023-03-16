@@ -51,8 +51,8 @@ const Layout: React.FC<Props> = ({ children }) => {
               <Link onClick={closeNav} className="nav-link" href="/">
                 Home
               </Link>
-              <Link onClick={closeNav} className="nav-link" href="/">
-                Where To Buy
+              <Link onClick={closeNav} className="nav-link" href="/coming-soon">
+                Project Titan
               </Link>
               <Link onClick={closeNav} className="nav-link" href="/events">
                 Events

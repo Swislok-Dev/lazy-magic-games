@@ -95,6 +95,14 @@ img {
   height: 100%;
 }
 
+.coming-soon {
+  display: flex;
+
+  justify-content: center;
+  padding-top: 2rem;
+  height: 100%;
+}
+
 section {
   position: relative;
   display: flex;
@@ -119,6 +127,11 @@ section > * {
   flex-direction: column;
   justify-content: space-between;
   grid-template-columns: 1fr;
+}
+
+#content:has(.coming-soon) {
+  height: 100vh;
+
 }
 
 header {
