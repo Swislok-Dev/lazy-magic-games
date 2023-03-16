@@ -56,12 +56,17 @@ export default function Home() {
         <p className="text-overlay bg-black-dark uppercase">more to come!</p>
       </section>
       <section>
+        <div className=" bottom">
+          <h2 className="uppercase">Unite.</h2>
+          <h2 className="uppercase">Explore.</h2>
+          <h2 className="uppercase">Dominate.</h2>
+        </div>
         <Image
-          className="full-image"
-          src="/images/PT_defectors_edition.png"
-          height={500}
+          src="/images/PT_defectors_edition_cropped_and_logo.png"
           width={500}
-          alt="Project Titan Defectors Edition Logo"
+          height={500}
+          alt="Project Titan Defectors Edition Banner"
+          className="full-image"
         />
       </section>
       <section>
@@ -94,8 +99,8 @@ export default function Home() {
               reason why I started to develop games on my own. My father was a
               man of great imagination and whimsicalness. It was he who
               instilled in me the foundation I use in all our games. That being,
-              &quot;Chase everything <strong>you</strong> are passionate about because no one else
-              will.&quot;
+              &quot;Chase everything <strong>you</strong> are passionate about
+              because no one else will.&quot;
             </p>
           </div>
         </article>
