@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { TiSocialFacebook, TiSocialYoutube } from 'react-icons/Ti';
+import { TiSocialFacebook, TiSocialYoutube } from 'react-icons/ti';
 
 type Props = {
   children: any;
