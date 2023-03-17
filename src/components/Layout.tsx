@@ -29,7 +29,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       </Head>
       <div id="content">
         <header>
-          <div onClick={() => setIsShown(!isShown)} id="hamburger">
+          <div onClick={() => setIsShown(!isShown)} id="hamburger" className={isVisible}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>

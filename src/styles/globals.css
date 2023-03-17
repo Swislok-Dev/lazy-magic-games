@@ -154,13 +154,26 @@ header {
   cursor: pointer;
 }
 
+#hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(225deg);
+}
+
+#hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(135deg);
+}
+
 .bar {
   background-color: var(--orange);
   margin: 7px 0;
   display: block;
-  width: 25px;
+  width: 30px;
   height: 3px;
   border-radius: 5px;
+  transition: all 500ms ease;
 }
 
 header span:not(.bar) {
