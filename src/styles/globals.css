@@ -200,7 +200,12 @@ main {
 }
 
 nav {
-  white-space: nowrap;
+  position: static;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: all 500ms ease;
+  background-color: var(--black);
 }
 
 #main-navigation {
@@ -208,38 +213,34 @@ nav {
   top: 0;
   left: -100%;
   height: 100%;
-  max-width: fit-content;
-  overflow: scroll;
   transition: left 500ms ease;
   background-color: var(--black);
   z-index: 9;
+  padding-right: 2rem;
+
 }
 
-#main-navigation > * {
-  position: sticky;
-  top: 50px;
+#main-navigation ul {
+  height: fit-content;
 }
 
 #main-navigation.active,
-.main-content.inactive {
-  display: flex;
-  width: 100%;
+.main-content.inactive,
+nav.active {
+  width: max-content;
   left: 0;
 }
 
-.nav-links {
+ul.nav-links {
   display: block;
   flex-direction: column;
-  gap: 2rem;
-  position: relative;
-  /* top: 0;  */
-  /* margin-top: 2rem; */
-  padding-top: 2rem;
+  position: sticky;
+  top: 10rem;
+
 }
 
 .nav-link {
   display: block;
-  position: relative;
   margin: 2rem 1rem 0 0;
   color: white;
 }

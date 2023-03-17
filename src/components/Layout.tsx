@@ -29,7 +29,11 @@ const Layout: React.FC<Props> = ({ children }) => {
       </Head>
       <div id="content">
         <header>
-          <div onClick={() => setIsShown(!isShown)} id="hamburger" className={isVisible}>
+          <div
+            onClick={() => setIsShown(!isShown)}
+            id="hamburger"
+            className={isVisible}
+          >
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
@@ -45,23 +49,29 @@ const Layout: React.FC<Props> = ({ children }) => {
         </header>
 
         <main onClick={closeNav}>
-          <nav className={isVisible} id="main-navigation">
-            {/* <div id="navigation" className={isShown ? 'active' : undefined}> */}
-            <ul className="nav-links">
-              <Link onClick={closeNav} className="nav-link" href="/">
-                Home
-              </Link>
-              <Link onClick={closeNav} className="nav-link" href="/coming-soon">
-                Project Titan
-              </Link>
-              <Link onClick={closeNav} className="nav-link" href="/events">
-                Events
-              </Link>
-              <Link onClick={closeNav} className="nav-link" href="/">
-                Contact Us
-              </Link>
-            </ul>
-            {/* </div> */}
+          <nav className={isVisible}>
+            <div className={isVisible} id="main-navigation">
+              {/* <div id="navigation" className={isShown ? 'active' : undefined}> */}
+              <ul className="nav-links">
+                <Link onClick={closeNav} className="nav-link" href="/">
+                  Home
+                </Link>
+                <Link
+                  onClick={closeNav}
+                  className="nav-link"
+                  href="/coming-soon"
+                >
+                  Project Titan
+                </Link>
+                <Link onClick={closeNav} className="nav-link" href="/events">
+                  Events
+                </Link>
+                <Link onClick={closeNav} className="nav-link" href="/">
+                  Contact Us
+                </Link>
+              </ul>
+              {/* </div> */}
+            </div>
           </nav>
           <div className="main-content">{children}</div>
         </main>
