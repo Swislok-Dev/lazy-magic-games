@@ -9,8 +9,8 @@
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 }
 
 @font-face {
@@ -368,20 +368,22 @@ footer a > * {
   .about-lmg-container {
     grid-template-columns: unset;
   }
+
+  .about-lmg p {
+    text-align: justify;
+  }
 }
 
 .about-lmg {
   display: grid;
-  flex-direction: column;
-  justify-content: center;
+  grid-auto-rows: 1fr 6fr;
   padding: 2rem;
   max-width: 500px;
   margin: 0 auto;
 }
 
 .about-lmg p {
-  justify-self: center;
-  text-align: center;
+  letter-spacing: 1px;
   line-height: 2rem;
   color: var(--white-dark);
 }
