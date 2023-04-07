@@ -203,7 +203,6 @@ nav {
   position: static;
   top: 0;
   left: -100%;
-  width: 100%;
   transition: all 500ms ease;
   background-color: var(--black);
 }
@@ -243,6 +242,28 @@ ul.nav-links {
   display: block;
   margin: 2rem 1rem 0 0;
   color: white;
+}
+
+@media screen and (min-width: 1100px) {
+  main {
+    display: grid;
+    grid-auto-flow: column;
+
+  }
+
+  header {
+    place-content: center;
+  }
+
+  #hamburger, header span {
+    display: none;
+  }
+
+
+  #main-navigation {
+    position: unset;
+    left: unset;
+  }
 }
 
 footer {

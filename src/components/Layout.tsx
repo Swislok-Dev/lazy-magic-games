@@ -49,8 +49,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         </header>
 
         <main onClick={closeNav}>
-          <nav className={isVisible}>
-            <div className={isVisible} id="main-navigation">
+            <nav className={isVisible} id="main-navigation">
               {/* <div id="navigation" className={isShown ? 'active' : undefined}> */}
               <ul className="nav-links">
                 <Link onClick={closeNav} className="nav-link" href="/">
@@ -71,8 +70,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                 </Link>
               </ul>
               {/* </div> */}
-            </div>
-          </nav>
+            </nav>
           <div className="main-content">{children}</div>
         </main>
 
