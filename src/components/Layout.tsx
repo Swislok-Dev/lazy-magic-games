@@ -23,7 +23,10 @@ const Layout: React.FC<Props> = ({ children }) => {
       <Head>
         <title>Lazy Magic Games</title>
         <meta name="description" content="Lazy Magic Games website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
@@ -49,28 +52,32 @@ const Layout: React.FC<Props> = ({ children }) => {
         </header>
 
         <main onClick={closeNav}>
-            <nav className={isVisible} id="main-navigation">
-              {/* <div id="navigation" className={isShown ? 'active' : undefined}> */}
-              <ul className="nav-links">
-                <Link onClick={closeNav} className="nav-link" href="/">
-                  Home
-                </Link>
-                <Link
-                  onClick={closeNav}
-                  className="nav-link"
-                  href="/coming-soon"
-                >
-                  Project Titan
-                </Link>
-                <Link onClick={closeNav} className="nav-link" href="/events">
-                  Events
-                </Link>
-                <Link onClick={closeNav} className="nav-link" href="/">
-                  Contact Us
-                </Link>
-              </ul>
-              {/* </div> */}
-            </nav>
+          <nav className={isVisible} id="main-navigation">
+            {/* <div id="navigation" className={isShown ? 'active' : undefined}> */}
+            <ul className="nav-links">
+              <Link onClick={closeNav} className="nav-link" href="/">
+                Home
+              </Link>
+              <Link
+                onClick={closeNav}
+                className="nav-link"
+                href="/coming-soon"
+              >
+                Project Titan
+              </Link>
+              <Link
+                onClick={closeNav}
+                className="nav-link"
+                href="/events"
+              >
+                Events
+              </Link>
+              <Link onClick={closeNav} className="nav-link" href="/">
+                Contact Us
+              </Link>
+            </ul>
+            {/* </div> */}
+          </nav>
           <div className="main-content">{children}</div>
         </main>
 
@@ -90,7 +97,8 @@ const Layout: React.FC<Props> = ({ children }) => {
             </Link>
           </div>
           <p className="uppercase">
-            Copyright &copy; 2023 by Lazy Magic Games - All rights reserved
+            Copyright &copy; 2023 by Lazy Magic Games - All rights
+            reserved
           </p>
         </footer>
       </div>

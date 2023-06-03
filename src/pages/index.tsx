@@ -56,11 +56,6 @@ export default function Home() {
         <p className="text-overlay bg-black-dark uppercase">more to come!</p>
       </section>
       <section>
-        <div className=" bottom">
-          <h2 className="uppercase">Unite.</h2>
-          <h2 className="uppercase">Explore.</h2>
-          <h2 className="uppercase">Dominate.</h2>
-        </div>
         <Image
           src="/images/PT_defectors_edition_cropped_and_logo.png"
           width={500}
@@ -68,6 +63,11 @@ export default function Home() {
           alt="Project Titan Defectors Edition Banner"
           className="full-image"
         />
+        <div className=" bottom">
+          <h2 className="uppercase">Unite.</h2>
+          <h2 className="uppercase">Explore.</h2>
+          <h2 className="uppercase">Dominate.</h2>
+        </div>
       </section>
       <section>
         <article className="about-lmg-container bg-black-dark">
