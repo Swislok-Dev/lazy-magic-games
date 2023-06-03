@@ -64,9 +64,25 @@ export default function Home() {
           className="full-image"
         />
         <div className=" bottom">
-          <h2 className="uppercase">Unite.</h2>
-          <h2 className="uppercase">Explore.</h2>
-          <h2 className="uppercase">Dominate.</h2>
+          <h2 className="uppercase">Unite</h2>
+          <Image 
+          src="/images/Downward_Sword_Icon.png"
+
+          width={200}
+          height={200}
+          alt="Project Titan iconography"
+          
+          />
+          <h2 className="uppercase">Explore</h2>
+          <Image 
+          src="/images/Downward_Sword_Icon.png"
+
+          width={200}
+          height={200}
+          alt="Project Titan iconography"
+          
+          />
+          <h2 className="uppercase">Dominate</h2>
         </div>
       </section>
       <section>
