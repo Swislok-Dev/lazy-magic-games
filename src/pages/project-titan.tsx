@@ -7,6 +7,15 @@ function ProjectTitanPage() {
   return (
     <Layout>
       <section>
+        <Image
+          src="/images/Project_Titan_Assets/PTBannerArt.png"
+          height={1200}
+          width={1200}
+          alt="PT Banner Art"
+          className="image"
+        />
+      </section>
+      <section>
         <div className="text-overlay">
           <h2>It&apos;s here!!</h2>
           <p>
@@ -22,11 +31,11 @@ function ProjectTitanPage() {
           </Link>
         </div>
         <Image
-          src="/images/PT_notext.png"
+          src="/images/Project_Titan_Assets/spaceship.jpeg"
           height={500}
           width={500}
           alt="Project Titan pre-order banner"
-          className="image"
+          className="image image-dark"
         />
       </section>
 
