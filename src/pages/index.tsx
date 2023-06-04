@@ -34,56 +34,9 @@ export default function Home() {
           className="full-image"
         />
       </section>
-      <section>
-        <div className="text-overlay">
-          <h2>It&apos;s here!!</h2>
-          <p>
-            The big day may have come and gone, but here is the link
-            if you missed it.
-          </p>
-          <Link
-            href="https://www.thegamecrafter.com/games/project-titan:-strategy-card-game"
-            target="_blank"
-            className="btn"
-          >
-            Get a copy
-          </Link>
-        </div>
-        <Image
-          src="/images/PT_notext.png"
-          height={500}
-          width={500}
-          alt="Project Titan pre-order banner"
-          className="image"
-        />
-      </section>
+      
 
-      <section>
-        <Image
-          src="/images/PT_defectors_edition_cropped_and_logo.png"
-          width={1200}
-          height={1200}
-          alt="Project Titan Defectors Edition Banner"
-          className="full-image"
-        />
-        <div className=" bottom">
-          <h2 className="uppercase">Unite</h2>
-          <Image
-            src="/images/Downward_Sword_Icon.png"
-            width={200}
-            height={200}
-            alt="Project Titan iconography"
-          />
-          <h2 className="uppercase">Explore</h2>
-          <Image
-            src="/images/Downward_Sword_Icon.png"
-            width={200}
-            height={200}
-            alt="Project Titan iconography"
-          />
-          <h2 className="uppercase">Dominate</h2>
-        </div>
-      </section>
+      
       <section>
         <article className="about-lmg-container bg-black-dark">
           <div className="about-lmg">
