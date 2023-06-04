@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { FaDiscord } from 'react-icons/fa';
 import { TiSocialFacebook, TiSocialYoutube } from 'react-icons/ti';
 
 type Props = {
@@ -61,7 +62,7 @@ const Layout: React.FC<Props> = ({ children }) => {
               <Link
                 onClick={closeNav}
                 className="nav-link"
-                href="/coming-soon"
+                href="/project-titan"
               >
                 Project Titan
               </Link>
@@ -94,6 +95,12 @@ const Layout: React.FC<Props> = ({ children }) => {
               target="_blank"
             >
               <TiSocialYoutube />
+            </Link>
+            <Link
+              href="https://discord.com/channels/685553702744227848/946079450892759100"
+              target="_blank"
+            >
+              <FaDiscord />
             </Link>
           </div>
           <p className="uppercase">
