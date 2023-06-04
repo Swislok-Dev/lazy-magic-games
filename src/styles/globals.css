@@ -47,6 +47,21 @@
   letter-spacing: 3px;
 }
 
+.full-image {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-dark {
+  filter: brightness(60%);
+}
+
 html,
 body {
   box-sizing: content-box;
@@ -105,14 +120,8 @@ img {
   height: 100%;
 }
 
-.full-image {
-  width: 100%;
-  height: 100%;
-}
-
 .coming-soon {
   display: flex;
-
   justify-content: center;
   padding-top: 2rem;
   height: 100%;
@@ -394,13 +403,6 @@ footer a > * {
 
 .text-overlay h2 {
   text-transform: uppercase;
-}
-
-.image {
-  height: 40vh;
-  width: 100%;
-  filter: brightness(60%);
-  object-fit: cover;
 }
 
 .about-lmg-container {
