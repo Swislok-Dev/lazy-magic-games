@@ -8,9 +8,10 @@
   --orange-light: rgb(255, 123, 0);
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono',
+    'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace',
+    'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New',
+    monospace;
 }
 
 @font-face {
@@ -30,11 +31,20 @@
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('/fonts/BebasNeue-Regular.ttf')
+  src: url('/fonts/BebasNeue-Regular.ttf');
 }
 
 .border {
   border: 2px solid white;
+}
+
+.text-centered {
+  min-height: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(1rem, 6vw, 5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
 }
 
 html,
@@ -152,6 +162,7 @@ header {
   gap: 16px;
   background-color: var(--black-dark);
   color: var(--white);
+  border-bottom: 1px solid var(--orange);
 }
 
 #hamburger {
@@ -221,7 +232,6 @@ nav {
   background-color: var(--black);
   z-index: 9;
   padding-right: 2rem;
-
 }
 
 #main-navigation ul {
@@ -240,7 +250,6 @@ ul.nav-links {
   flex-direction: column;
   position: sticky;
   top: 10rem;
-
 }
 
 .nav-link {
@@ -259,14 +268,17 @@ ul.nav-links {
     place-content: center;
   }
 
-  #hamburger, header span {
+  #hamburger,
+  header span {
     display: none;
   }
-
 
   #main-navigation {
     position: unset;
     left: unset;
+  }
+  nav {
+    box-shadow: inset -5px 0 7px -3px var(--orange);
   }
 }
 
@@ -350,7 +362,7 @@ footer a > * {
 }
 
 .bottom {
-  font-family: "Bebas Neue";
+  font-family: 'Bebas Neue';
   display: flex;
   flex-direction: row;
   justify-content: space-between;
