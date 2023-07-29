@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { FaDiscord } from 'react-icons/fa';
 import { TiSocialFacebook, TiSocialYoutube } from 'react-icons/ti';
+import Navbar from './navigation/Navbar';
 
 type Props = {
   children: any;
@@ -53,32 +54,8 @@ const Layout: React.FC<Props> = ({ children }) => {
         </header>
 
         <main onClick={closeNav}>
-          <nav className={isVisible} id="main-navigation">
-            {/* <div id="navigation" className={isShown ? 'active' : undefined}> */}
-            <ul className="nav-links">
-              <Link onClick={closeNav} className="nav-link" href="/">
-                Home
-              </Link>
-              <Link
-                onClick={closeNav}
-                className="nav-link"
-                href="/project-titan"
-              >
-                Project Titan
-              </Link>
-              <Link
-                onClick={closeNav}
-                className="nav-link"
-                href="/events"
-              >
-                Events
-              </Link>
-              <Link onClick={closeNav} className="nav-link" href="/contactPage">
-                Contact Us
-              </Link>
-            </ul>
-            {/* </div> */}
-          </nav>
+          <Navbar isVisible={isVisible} closeNav={closeNav} />
+
           <div className="main-content">{children}</div>
         </main>
 
