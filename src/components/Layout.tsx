@@ -73,7 +73,7 @@ const Layout: React.FC<Props> = ({ children }) => {
               >
                 Events
               </Link>
-              <Link onClick={closeNav} className="nav-link" href="/">
+              <Link onClick={closeNav} className="nav-link" href="/contactPage">
                 Contact Us
               </Link>
             </ul>
