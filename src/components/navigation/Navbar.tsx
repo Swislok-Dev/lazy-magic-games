@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 
-function Navbar({ isVisible, closeNav }) {
+function Navbar(props: any) {
+  const { isVisible, closeNav } = props;
+
   return (
     <nav className={isVisible} id="main-navigation">
       <ul className="nav-links">
