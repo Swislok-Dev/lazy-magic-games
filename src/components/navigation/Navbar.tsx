@@ -23,7 +23,7 @@ function Navbar({ isVisible, closeNav }) {
           className="nav-link"
           href="/contactPage"
         >
-          Contact Us
+          Play With Us
         </Link>
       </ul>
     </nav>
