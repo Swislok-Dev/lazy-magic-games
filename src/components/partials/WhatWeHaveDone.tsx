@@ -27,6 +27,7 @@ function WhatWeHaveDone() {
         height={1200}
         width={1200}
         alt={'LMG presents'}
+        id="eventpics2"
       />
       <span className="bg-black-dark text-centered"></span>
       <Image
@@ -34,6 +35,7 @@ function WhatWeHaveDone() {
         height={1200}
         width={1200}
         alt={'LMG presents'}
+        id="eventpics"
       />
       <h2 className="text-centered uppercase bg-black-dark">
         Where we are going

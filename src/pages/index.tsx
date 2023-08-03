@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import WhatWeHaveDone from '../components/WhatWeHaveDone';
+import WhatWeHaveDone from '../components/partials/WhatWeHaveDone';
 import LifeGoals from '../components/paragraphs/LifeGoals';
 
 export default function Home() {
