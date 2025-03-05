@@ -23,7 +23,8 @@ function ProjectTitanPage() {
             if you missed it.
           </p>
           <Link
-            href="https://www.thegamecrafter.com/games/project-titan:-strategy-card-game"
+            // href="https://www.thegamecrafter.com/games/project-titan:-strategy-card-game"
+            href="https://www.thegamecrafter.com/games/ksrw-project-titan:-strategy-card-game-basic-training-t-w"
             target="_blank"
             className="btn"
           >
