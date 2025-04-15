@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import Link from 'next/link';
-import Image from 'next/image';
+import React from "react";
+import Layout from "../components/Layout";
+import Link from "next/link";
+import Image from "next/image";
 
 function ProjectTitanPage() {
   return (
@@ -15,12 +15,24 @@ function ProjectTitanPage() {
           className="image"
         />
       </section>
+      <section className="video-embed">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/sqS9NTqSLnk?si=TlPyUfMr1qu8W5wN&autoplay=1"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </section>
       <section>
         <div className="text-overlay">
           <h2>It&apos;s here!!</h2>
           <p>
-            The big day may have come and gone, but here is the link
-            if you missed it.
+            The big day may have come and gone, but here is the link if you
+            missed it.
           </p>
           <Link
             // href="https://www.thegamecrafter.com/games/project-titan:-strategy-card-game"
