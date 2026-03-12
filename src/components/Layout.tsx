@@ -12,6 +12,8 @@ type Props = {
 const Layout: React.FC<Props> = ({ children }) => {
   const [isShown, setIsShown] = React.useState(false);
 
+  let showDate = new Date().getFullYear()
+
   const closeNav = () => {
     if (isShown) {
       setIsShown(false);
@@ -81,7 +83,7 @@ const Layout: React.FC<Props> = ({ children }) => {
             </Link>
           </div>
           <p className="uppercase">
-            Copyright &copy; 2023 by Lazy Magic Games - All rights
+            Copyright &copy; {showDate} by Lazy Magic Games - All rights
             reserved
           </p>
         </footer>
