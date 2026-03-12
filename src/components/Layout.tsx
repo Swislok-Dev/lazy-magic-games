@@ -83,7 +83,7 @@ const Layout: React.FC<Props> = ({ children }) => {
             </Link>
           </div>
           <p className="uppercase">
-            Copyright &copy; {showDate} by Lazy Magic Games - All rights
+            Copyright &copy; 2023 - {showDate} by Lazy Magic Games - All rights
             reserved
           </p>
         </footer>
